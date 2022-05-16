@@ -65,19 +65,19 @@ def display_books():
     for line in lines:
         if len(line) > 1:
             data = line.rstrip('\n').split(",")
-            if choice == 1:
+            if choice == 1: # display on base of author name
                 if data[2] == author_name:
                     display_selected_books(data)
                     flag = True
-            elif choice == 2:
+            elif choice == 2: # display on base of publisher
                 if data[3] == publisher_name:
                     display_selected_books(data)
                     flag = True
-            elif choice == 3:
+            elif choice == 3: #display on base of year
                 if int(data[4]) == year:
                     display_selected_books(data)
                     flag = True
-            elif choice == 4:
+            elif choice == 4: # display all books
                 display_selected_books(data)
                 flag = True
             else :
